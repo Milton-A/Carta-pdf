@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import FormularioCarta from './FormularioCarta';
+import GerarPDF from './GerarPDF';
 
-function App() {
+const App = () => {
+  const [dadosFormulario, setDadosFormulario] = useState(null);
+
+  const handleSubmitFormulario = (data) => {
+    setDadosFormulario(data);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Sistema de Gestão de Cartas em PDF</h1>
+      <FormularioCarta onSubmit={handleSubmitFormulario} />
+      {dadosFormulario && <GerarPDF dados={dadosFormulario} />}
     </div>
   );
-}
+};
 
 export default App;
