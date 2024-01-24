@@ -2,6 +2,8 @@
 
 Este é um projeto React que permite aos usuários gerar cartas em formato PDF preenchendo um formulário com os dados necessários. O sistema é ideal para gerentes ou administradores que precisam criar cartas personalizadas para enviar aos clientes ou outras partes interessadas.
 
+### Link: https://carta-pdf.vercel.app/
+
 ## Funcionalidades
 
 - Preencher um formulário com os dados da carta, como nome, endereço e outros campos relevantes.
